@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap");
+  font-family: "Yesteryear", cursive;
 }
 
 a {
@@ -21,6 +21,10 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #e4e4e7;
   }
+}
+
+.logo {
+  color: #b91c1c;
 }
