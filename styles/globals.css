@@ -1,9 +1,9 @@
 html,
 body {
   padding: 0;
-  margin: 0;
-  @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap");
-  font-family: "Yesteryear", cursive;
+  font-family: "Magra", sans-serif;
+  font-size: 18px;
+  line-height: 2rem;
 }
 
 a {
@@ -15,16 +15,26 @@ a {
   box-sizing: border-box;
 }
 
+button {
+  text-decoration: none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
-    color: white;
+    color: #a1a1aa;
     background: #e4e4e7;
   }
 }
 
-.logo {
-  color: #b91c1c;
-}
+/* nav {
+  display: flex;
+  flex-direction: row;
+} */
+
+/* .wrapper {
+  padding: 1rem;
+  position: absolute;
+} */
