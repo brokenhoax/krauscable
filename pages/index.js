@@ -4,7 +4,7 @@ import Head from "next/head";
 // import styles from "../styles/Home.module.css";
 import Logo from "../components/logo/logo.js";
 import Navbar from "../components/navbar/navbar.js";
-import About from "./about/about.js";
+import Kraus from "./about/kraus.js";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
 
       <main className="wrapper">
         <Logo></Logo>
-        <About></About>
+        <Kraus></Kraus>
         <Navbar></Navbar>
       </main>
 
