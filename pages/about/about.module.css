@@ -1,0 +1,18 @@
+.about {
+  padding: 0px 16px 16px 16px;
+}
+
+.header {
+  color: #3f3f46;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.callout {
+  color: #991b1b;
+}
+
+.text {
+  line-height: 1.5rem;
+}
