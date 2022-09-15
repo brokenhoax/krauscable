@@ -1,7 +1,6 @@
 import styles from "./about.module.css";
-import layout from "../../components/layout.module.css";
 
-const About = () => {
+const Kraus = () => {
   return (
     <div className={`${styles.about}`}>
       <h1 className={styles.header}>
@@ -45,4 +44,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Kraus;
