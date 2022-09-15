@@ -14,34 +14,26 @@ import {
 import {} from "@fortawesome/free-solid-svg-icons";
 
 const navLinks = [
-  { index: 0, name: "Home", path: "/", icon: faHouse, active: false },
+  { name: "Home", path: "/", icon: faHouse, active: false },
   {
-    index: 1,
     name: "Profile",
-    path: "/profile",
+    path: "/profile/user",
     icon: faCircleUser,
-    active: false,
   },
   {
-    index: 2,
     name: "Services",
-    path: "/services",
+    path: "/services/internet",
     icon: faCartShopping,
-    active: false,
   },
   {
-    index: 3,
     name: "Channels",
-    path: "/Channels",
+    path: "/channels/listings",
     icon: faList,
-    active: false,
   },
   {
-    index: 4,
     name: "Contact",
-    path: "/contact",
+    path: "/contact/info",
     icon: faCircleQuestion,
-    active: false,
   },
 ];
 
