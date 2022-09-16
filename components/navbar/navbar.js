@@ -44,7 +44,7 @@ function Navbar() {
       <ul className={styles.navContainer}>
         {navLinks.map((link, index) => {
           return (
-            <li key={link.index} className={styles.link}>
+            <li key={index} className={styles.link}>
               <Link href={link.path}>
                 <FontAwesomeIcon
                   icon={link.icon}
