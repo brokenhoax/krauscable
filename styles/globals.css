@@ -1,3 +1,7 @@
+/* <<<<= Reset =>>>*/
+
+/* <<<<=========>>>> */
+
 html,
 body {
   padding: 0;
@@ -19,22 +23,68 @@ button {
   text-decoration: none;
 }
 
+h1 {
+  color: white;
+  line-height: 0px;
+  font-size: 32px;
+}
+
+h2 {
+  color: #52525b;
+  line-height: 0px;
+  font-size: 28px;
+}
+
+.primary-text {
+  color: #991b1b;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.secondary-small {
+  color: #71717a;
+  font-weight: 700;
+  font-size: 16px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
-    color: #a1a1aa;
+    color: #71717a;
     background: #e4e4e7;
   }
 }
 
-/* nav {
-  display: flex;
-  flex-direction: row;
-} */
+.logo {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
-/* .wrapper {
-  padding: 1rem;
-  position: absolute;
-} */
+.divider {
+  padding-top: 16px;
+  border-style: solid;
+  border-color: #d4d4d8;
+  border-width: 0px;
+  border-bottom-width: 1px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.quote {
+  padding: 16px 0px 16px 0;
+  font-weight: 800;
+  color: #52525b;
+  font-size: 20px;
+  line-height: 32px;
+  color: #a1a1aa;
+}

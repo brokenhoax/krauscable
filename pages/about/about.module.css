@@ -1,8 +1,6 @@
-.about {
-  padding: 0px 16px 16px 16px;
-}
-
 .header {
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: #3f3f46;
   line-height: 2rem;
   font-size: 1.5rem;

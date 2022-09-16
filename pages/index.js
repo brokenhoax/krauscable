@@ -15,7 +15,9 @@ export default function Home() {
       </Head>
 
       <main className="wrapper">
-        <Logo></Logo>
+        <div className="logo">
+          <Logo></Logo>
+        </div>
         <Kraus></Kraus>
         <Navbar></Navbar>
       </main>
