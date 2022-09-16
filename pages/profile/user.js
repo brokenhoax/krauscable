@@ -45,7 +45,9 @@ export default function User() {
         {/* Account Activity */}
         <h1 className={styles.header}>Account Activity</h1>
         {/* Payment History */}
-        <h2>Payment History</h2>
+        <div className={styles.primary}>
+          <h2>Payment History</h2>
+        </div>
         <ol className={styles.list}>
           <li className="flex-between">
             <div>July 31, 2022</div>
