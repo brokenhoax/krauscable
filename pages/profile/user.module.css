@@ -7,6 +7,7 @@
 .header {
   padding-top: 32px;
   padding-bottom: 16px;
+  color: white;
 }
 
 .section {
@@ -18,5 +19,4 @@
   padding: 0;
   margin: 0;
   padding-top: 12px;
-  padding-bottom: 12px;
 }
