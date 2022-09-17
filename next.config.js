@@ -5,6 +5,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   assetPrefix: isProd ? "/krauscable/" : undefined,
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
