@@ -48,8 +48,11 @@ function Navbar() {
               <Link href={link.path}>
                 <FontAwesomeIcon
                   icon={link.icon}
-                  size="xl"
-                  className={router.pathname == link.path ? styles.active : ""}
+                  className={
+                    router.pathname == link.path
+                      ? styles["active"] + " " + styles["test"]
+                      : styles["test"]
+                  }
                 />
               </Link>
             </li>

@@ -3,7 +3,6 @@
   /* justify-content: space-between; */
   justify-content: space-between;
   position: fixed;
-  width: 100%;
   padding: 16px 32px 16px 32px;
   margin: 0;
   left: 0px;
@@ -34,4 +33,9 @@
 
 .active:active {
   color: #991b1b;
+}
+
+.test {
+  width: 32px;
+  height: 32px;
 }

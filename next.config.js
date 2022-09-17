@@ -5,8 +5,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   assetPrefix: isProd ? "/krauscable/" : undefined,
-  images: {
-    unoptimized: true,
+  env: {
+    PUBLIC_URL: "/",
   },
 };
 
