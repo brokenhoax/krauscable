@@ -8,6 +8,9 @@ const nextConfig = {
   env: {
     PUBLIC_URL: "/",
   },
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
