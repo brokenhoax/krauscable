@@ -7,7 +7,7 @@ export default function Agreement() {
     <Layout>
       <Logo></Logo>
       <section className="pb-128">
-        <p>Placeholder</p>
+        <p>Placeholder Text</p>
       </section>
       <Navbar></Navbar>
     </Layout>
