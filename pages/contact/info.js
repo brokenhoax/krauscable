@@ -19,14 +19,14 @@ export default function Info() {
         {/* Address */}
         <div className="pt-24">
           <h2>Main Office</h2>
-          <Link
+          <a
             className="link"
             href="https://goo.gl/maps/PgSRWJcbeoV9bGdH7"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             305 State Street Manhattan, IL 60442
-          </Link>
+          </a>
         </div>
         <div className={"divider"}></div>
         {/* Office Hours */}
@@ -60,7 +60,7 @@ export default function Info() {
             <div className="flex">
               <FontAwesomeIcon icon={faTelevision} className={"icon-small"} />
               <p className="pl-16 link">
-                <a href="/services/overview">Order Services</a>
+                <Link href="/services/overview">Order Services</Link>
               </p>
             </div>
             <div className="flex">
