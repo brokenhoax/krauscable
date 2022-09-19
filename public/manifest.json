@@ -3,7 +3,7 @@
 
   "short_name": "KrausCable",
 
-  "start_url": "/",
+  "start_url": "/krauscable",
 
   "display": "standalone"
 }
