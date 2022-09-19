@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Layout from "../../components/layout";
 import Navbar from "../../components/navbar/navbar";
 import Logo from "../../components/logo/logo.js";
@@ -18,13 +19,14 @@ export default function Info() {
         {/* Address */}
         <div className="pt-24">
           <h2>Main Office</h2>
-          <a
+          <Link
             className="link"
             href="https://goo.gl/maps/PgSRWJcbeoV9bGdH7"
             target="_blank"
+            rel="noreferrer"
           >
             305 State Street Manhattan, IL 60442
-          </a>
+          </Link>
         </div>
         <div className={"divider"}></div>
         {/* Office Hours */}
