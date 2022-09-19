@@ -17,7 +17,7 @@ export default function Home() {
         />
         <meta name="apple-mobile-web-app-capable" content="yes"></meta>
         <meta name="theme-color" content="#e4e4e7"></meta>
-        <link rel="manifest" href="/manifest.json"></link>
+        <link rel="manifest" href="/krauscable/manifest.json"></link>
       </Head>
 
       <main className="wrapper">
