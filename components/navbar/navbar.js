@@ -11,7 +11,6 @@ import {
   faList,
   faCircleQuestion,
 } from "@fortawesome/free-solid-svg-icons";
-import {} from "@fortawesome/free-solid-svg-icons";
 
 const navLinks = [
   { name: "Home", path: "/", icon: faHouse, active: false },
@@ -22,7 +21,7 @@ const navLinks = [
   },
   {
     name: "Services",
-    path: "/services/internet",
+    path: "/services/overview",
     icon: faCartShopping,
   },
   {
@@ -50,8 +49,8 @@ function Navbar() {
                   icon={link.icon}
                   className={
                     router.pathname == link.path
-                      ? styles["active"] + " " + styles["test"]
-                      : styles["test"]
+                      ? styles["active"] + " " + "icon"
+                      : "icon"
                   }
                 />
               </Link>
