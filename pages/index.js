@@ -16,10 +16,7 @@ export default function Home() {
           content="Unofficial Website for Kraus Cable TV"
         />
         <meta name="apple-mobile-web-app-capable" content="yes"></meta>
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="white"
-        ></meta>
+        <meta name="theme-color" content="#e4e4e7"></meta>
         <link rel="manifest" href="/manifest.json"></link>
       </Head>
 
