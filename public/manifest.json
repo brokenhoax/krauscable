@@ -1,9 +1,9 @@
 {
   "name": "KrausCable",
 
-  "short_name": "krauscable",
+  "short_name": "KrausCable",
 
-  "start_url": "https://krauscable",
+  "start_url": ".",
 
   "display": "standalone"
 }
