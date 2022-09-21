@@ -7,7 +7,7 @@ export default function Listings() {
   return (
     <Layout>
       <Logo></Logo>
-      <h1>Account Management</h1>
+      <h1>Channel Listing</h1>
       <section className="table-wrapper">
         <table>
           <thead>
