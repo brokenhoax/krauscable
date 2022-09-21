@@ -1,7 +1,7 @@
 import Layout from "../../components/layout";
 import Navbar from "../../components/navbar/navbar";
 import Logo from "../../components/logo/logo.js";
-import { listings } from "./channels.js";
+import { listings } from "../../public/channels.js";
 
 export default function Listings() {
   return (
