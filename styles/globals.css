@@ -246,9 +246,31 @@ h3 {
   padding-top: 24px;
 }
 
+.mt-8 {
+  margin-top: 8px;
+}
+
+.pt-8 {
+  padding-top: 8px;
+}
+
+.pr-4 {
+  padding-right: 4px;
+}
+
+.pl-4 {
+  padding-left: 4px;
+}
+
 .flex {
   display: flex;
   align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .flex-between {
@@ -306,6 +328,11 @@ h3 {
   height: 20px;
 }
 
+.icon-xs {
+  width: 16px;
+  height: 16px;
+}
+
 .pl-16 {
   padding-left: 16px;
 }
@@ -313,8 +340,7 @@ h3 {
 table {
   border-collapse: collapse;
   width: 100%;
-  overflow: auto;
-  height: 200px;
+  margin-bottom: 2rem;
 }
 
 th {
@@ -346,11 +372,16 @@ td {
 }
 
 .table-wrapper {
-  margin-top: 16px;
   overflow-y: scroll;
-  height: 550px;
+  height: 100%;
+  width: 100%;
   outline: none;
   border: none;
+  z-index: 0;
+}
+
+tbody {
+  height: auto;
 }
 
 thead th {
@@ -372,9 +403,9 @@ tr.last {
   border-bottom: none;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 12px;
-}
+} */
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
@@ -384,4 +415,65 @@ tr.last {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+/* .search {
+  position: absolute;
+  background-color: white;
+  height: 32px;
+  width: 100%;
+  color: black;
+}
+
+.search-btn {
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  right: 8px;
+}
+
+.realative {
+  position: relative;
+} */
+
+input {
+  all: unset;
+}
+
+.search-form {
+  height: 40%;
+  background-color: #d4d4d8;
+  margin-bottom: 80px;
+}
+.search-input {
+  width: 100%;
+  background-color: #d4d4d8;
+  height: 40px;
+  border-radius: 5px;
+  text-indent: 14px;
+  margin-bottom: 8px;
+}
+
+select {
+  all: unset;
+}
+
+select {
+  width: 100%;
+  background-color: #d4d4d8;
+  height: 40px;
+  border-radius: 5px;
+  text-indent: 14px;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: auto;
+  background-color: #e4e4e7;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }

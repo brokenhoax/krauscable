@@ -1,0 +1,8 @@
+.listings {
+  height: 540px;
+  overflow-y: scroll;
+}
+
+.header {
+  padding-bottom: 28px;
+}
