@@ -1,5 +1,18 @@
-.container {
-  overflow-y: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+.wrapper {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-areas:
+    "logo"
+    "main"
+    "navbar";
+  padding-left: 512px;
+  padding-right: 512px;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
