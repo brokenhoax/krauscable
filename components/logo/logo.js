@@ -4,10 +4,10 @@ import logo from "../../public/logo.png";
 
 export default function Logo() {
   return (
-    <>
+    <div className={styles.logoWrapper}>
       <div className={styles.logo}>
-        <Image src={logo} alt="kraus logo" width={130} height={70} priority />
+        <Image src={logo} alt="kraus logo" layout={"responsive"} priority />
       </div>
-    </>
+    </div>
   );
 }

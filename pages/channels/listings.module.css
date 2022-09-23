@@ -1,8 +1,13 @@
 .listings {
-  height: 540px;
-  overflow-y: scroll;
+  overflow: scroll;
+  height: 65vh;
+}
+
+.flexTest {
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  padding-bottom: 28px;
+  margin-bottom: 16px;
 }

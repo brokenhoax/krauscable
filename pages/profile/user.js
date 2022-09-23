@@ -5,8 +5,7 @@ import Logo from "../../components/logo/logo.js";
 
 export default function User() {
   return (
-    <Layout>
-      <Logo></Logo>
+    <>
       <section className="pb-128">
         <h1>Account Management</h1>
         {/* User */}
@@ -82,7 +81,6 @@ export default function User() {
           </div>
         </div>
       </section>
-      <Navbar></Navbar>
-    </Layout>
+    </>
   );
 }

@@ -5,7 +5,6 @@ import Logo from "../../components/logo/logo.js";
 export default function Agreement() {
   return (
     <Layout>
-      <Logo></Logo>
       <section className="pb-128">
         <p>Placeholder Text</p>
       </section>

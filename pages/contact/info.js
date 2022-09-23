@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Layout from "../../components/layout";
-import Navbar from "../../components/navbar/navbar";
-import Logo from "../../components/logo/logo.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faExclamationCircle,
@@ -12,9 +10,8 @@ import {
 
 export default function Info() {
   return (
-    <Layout>
-      <Logo></Logo>
-      <section className="pb-128">
+    <>
+      <section>
         <h1>Contact Info</h1>
         {/* Address */}
         <div className="pt-24">
@@ -91,7 +88,6 @@ export default function Info() {
           </div>
         </div>
       </section>
-      <Navbar></Navbar>
-    </Layout>
+    </>
   );
 }

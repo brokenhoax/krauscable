@@ -1,13 +1,21 @@
-.logo {
-  /* color: #b91c1c;
-  font-size: 36px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Yesteryear", cursive; */
-  width: 100%;
-  padding: 16px 0px 8px 0px;
-  margin-bottom: 32px;
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  padding: 16px 0px 16px 0px;
+
   border-style: solid;
   border-color: #d4d4d8;
   border-width: 0px;
   border-bottom-width: 1px;
+}
+
+.logo {
+  width: 128px;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 92px;
+  }
 }
