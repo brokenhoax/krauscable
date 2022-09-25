@@ -1,12 +1,42 @@
+import React, { useState } from "react";
 import styles from "./listings.module.css";
 import { listings } from "../../public/channels.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCaretDown,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import _ from "lodash";
 
 export default function Listings() {
+  const [list, setListing] = useState(listings);
+  const [order, setOrder] = useState({
+    sortColumn: { path: "channel", order: "desc" },
+  });
+
+  const handleSearch = (e) => {
+    const newList = [...list];
+    const keyword = e.target.value.toLowerCase();
+    if (keyword !== "") {
+      const results = newList.filter((listing) => {
+        return listing.description.toLowerCase().includes(keyword);
+      });
+      setListing(results);
+    } else {
+      setListing(listings);
+    }
+  };
+
+  let handleSort = (path) => {
+    const sortColumn = { ...order };
+    if (sortColumn.path === path) {
+      sortColumn.order = sortColumn.order === "asc" ? "desc" : "asc";
+    } else {
+      sortColumn.path = path;
+      sortColumn.order = "asc";
+    }
+    setOrder(sortColumn);
+  };
+
+  let sorted = _.orderBy(list, [order.path], [order.order]);
+
   return (
     <div className={`${styles.flexTest} ${styles.header}`}>
       {/* Table */}
@@ -16,20 +46,24 @@ export default function Listings() {
           <table width="100%">
             <thead>
               <tr>
-                <th>
-                  {" "}
-                  <FontAwesomeIcon icon={faCaretDown} className={"icon-xs"} />
+                <th onClick={() => handleSort("channel")}>
+                  <FontAwesomeIcon
+                    icon={order.order === "asc" ? faCaretUp : faCaretDown}
+                    className={"icon-xs"}
+                  />
                   <span className="pl-4">Channel</span>
                 </th>
-                <th>
-                  {" "}
-                  <FontAwesomeIcon icon={faCaretDown} className={"icon-xs"} />
+                <th onClick={() => handleSort("description")}>
+                  <FontAwesomeIcon
+                    icon={order.order === "asc" ? faCaretDown : faCaretUp}
+                    className={"icon-xs"}
+                  />
                   <span className="pl-4">Name</span>
                 </th>
               </tr>
             </thead>
             <tbody>
-              {listings.map((x) => (
+              {sorted.map((x) => (
                 <tr key={x.id}>
                   <td>{x.channel}</td>
                   <td>{x.description}</td>
@@ -39,21 +73,16 @@ export default function Listings() {
           </table>
         </div>
       </div>
-      {/* Buttons */}
+      {/* Filters */}
       <div action="#" className="search-form">
         <div>
           <input
             type="text"
+            onChange={handleSearch}
             placeholder="Search..."
             name="search"
             className="search-input"
           ></input>
-          {/* <button>
-                <FontAwesomeIcon
-                  icon={faMagnifyingGlass}
-                  className={"icon-xs search-btn"}
-                />
-              </button> */}
           <select
             id="ex-dropdown-input"
             autoComplete="off"
