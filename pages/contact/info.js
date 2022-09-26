@@ -55,19 +55,19 @@ export default function Info() {
           <h2>Email</h2>
           <div className="flex-col">
             <div className="flex">
-              <FontAwesomeIcon icon={faTelevision} className={"icon-small"} />
+              <FontAwesomeIcon icon={faTelevision} className={"icon-sm"} />
               <p className="pl-16 link">
                 <Link href="/services/overview">Order Services</Link>
               </p>
             </div>
             <div className="flex">
-              <FontAwesomeIcon icon={faHeadset} className={"icon-small"} />
+              <FontAwesomeIcon icon={faHeadset} className={"icon-sm"} />
               <p className="pl-16 link">
                 <a href="mailto:krauscable@krausonline.com">Customer Support</a>
               </p>
             </div>
             <div className="flex">
-              <FontAwesomeIcon icon={faUserGear} className={"icon-small"} />
+              <FontAwesomeIcon icon={faUserGear} className={"icon-sm"} />
               <p className="pl-16 link">
                 <a href="mailto:andrew@krausonline.com?subject=Kraus Cable Webmaster">
                   Webmaster
@@ -77,7 +77,7 @@ export default function Info() {
             <div className="flex">
               <FontAwesomeIcon
                 icon={faExclamationCircle}
-                className={"icon-small"}
+                className={"icon-sm"}
               />
               <p className="pl-16 link">
                 <a href="mailto:art@krausonline.com?subject=Reporting Abuse">

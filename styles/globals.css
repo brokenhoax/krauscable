@@ -340,16 +340,20 @@ h3 {
 .icon {
   width: 32px;
   height: 32px;
+  cursor: pointer;
 }
 
-.icon-small {
+.icon-sm {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .icon-xs {
   width: 16px;
   height: 16px;
+  cursor: pointer;
+  outline: none;
 }
 
 .pl-16 {
@@ -455,7 +459,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 16px;
+  padding-top: 12px;
 }
 
 .search-input {
@@ -508,8 +512,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: red;
-  outline: 1px solid red;
+  background-color: #991b1b;
+  outline: 1px solid #991b1b;
 }
 
 ::-webkit-scrollbar {
