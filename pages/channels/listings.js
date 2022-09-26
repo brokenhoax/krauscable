@@ -6,6 +6,7 @@ import {
   faCaretDown,
   faCaretUp,
   faFilter,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import _ from "lodash";
 
@@ -46,24 +47,40 @@ export default function Listings() {
           onClick={() => handlePackageSelection("platinum")}
         >
           Platinum
+          <FontAwesomeIcon
+            icon={faCheck}
+            className={subscription === "platinum" ? "icon-xs red500" : "hide"}
+          />
         </div>
         <div
           className={styles.option}
           onClick={() => handlePackageSelection("gold")}
         >
           Gold
+          <FontAwesomeIcon
+            icon={faCheck}
+            className={subscription === "gold" ? "icon-xs red500" : "hide"}
+          />
         </div>
         <div
           className={styles.option}
           onClick={() => handlePackageSelection("silver")}
         >
           Silver
+          <FontAwesomeIcon
+            icon={faCheck}
+            className={subscription === "silver" ? "icon-xs red500" : "hide"}
+          />
         </div>
         <div
           className={styles.option}
           onClick={() => handlePackageSelection("bronze")}
         >
           Bronze
+          <FontAwesomeIcon
+            icon={faCheck}
+            className={subscription === "bronze" ? "icon-xs red500" : "hide"}
+          />
         </div>
       </div>
     );
