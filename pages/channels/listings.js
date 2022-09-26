@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import styles from "./listings.module.css";
 import { listings } from "../../public/channels.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretDown,
+  faCaretUp,
+  faFilter,
+} from "@fortawesome/free-solid-svg-icons";
 import _ from "lodash";
 
 export default function Listings() {
@@ -10,8 +14,62 @@ export default function Listings() {
   const [order, setOrder] = useState({
     sortColumn: { path: "channel", order: "desc" },
   });
+  const [filterToggle, setFilterToggle] = useState(false);
+  const [subscription, setSubscription] = useState("platinum");
 
-  const handleSearch = (e) => {
+  let handlePackageFilter = () => {
+    let toggle = filterToggle;
+    toggle = !toggle;
+    setFilterToggle(toggle);
+  };
+
+  let handlePackageSelection = (selection) => {
+    handlePackageFilter();
+    setSubscription(selection);
+    const newList = [...listings];
+    if (subscription) {
+      const results = newList.filter((listing) => {
+        return listing["packages"].includes(selection);
+      });
+      setListing(results);
+    } else {
+      setListing(list);
+    }
+    handlePackageFilter();
+  };
+
+  function showOptions() {
+    return (
+      <div className={styles.optionsWrapper}>
+        <div
+          className={styles.option}
+          onClick={() => handlePackageSelection("platinum")}
+        >
+          Platinum
+        </div>
+        <div
+          className={styles.option}
+          onClick={() => handlePackageSelection("gold")}
+        >
+          Gold
+        </div>
+        <div
+          className={styles.option}
+          onClick={() => handlePackageSelection("silver")}
+        >
+          Silver
+        </div>
+        <div
+          className={styles.option}
+          onClick={() => handlePackageSelection("bronze")}
+        >
+          Bronze
+        </div>
+      </div>
+    );
+  }
+
+  let handleSearch = (e) => {
     const newList = [...list];
     const keyword = e.target.value.toLowerCase();
     if (keyword !== "") {
@@ -38,11 +96,26 @@ export default function Listings() {
   let sorted = _.orderBy(list, [order.path], [order.order]);
 
   return (
-    <div className={`${styles.flexTest} ${styles.header}`}>
+    <div className={`${styles.flexTest}`}>
       {/* Table */}
       <div className={styles.listings}>
         <div className="table-wrapper">
-          <h1 className={styles.header}>Channel Listing</h1>
+          <h1 className={`flex-between ${styles.header}`}>
+            Channel Listing {/* Packages */}
+            <span className={styles.packages}>
+              <FontAwesomeIcon
+                icon={faFilter}
+                className="icon-xs"
+                // onBlur={() => handlePackageFilter()}
+                // onFocus={() => handlePackageFilter()}
+                onClick={() => handlePackageFilter()}
+                tabIndex="0"
+              />
+              <div className={styles.filter}>
+                {filterToggle ? showOptions() : null}
+              </div>
+            </span>
+          </h1>
           <table width="100%">
             <thead>
               <tr>
@@ -73,7 +146,7 @@ export default function Listings() {
           </table>
         </div>
       </div>
-      {/* Filters */}
+      {/* Search */}
       <div action="#" className="search-form">
         <div>
           <input
@@ -83,17 +156,6 @@ export default function Listings() {
             name="search"
             className="search-input"
           ></input>
-          <select
-            id="ex-dropdown-input"
-            autoComplete="off"
-            placeholder="How cool is this?"
-          >
-            <option value="selected">--Select--</option>
-            <option value="bronze">Bronze Package</option>
-            <option value="silver">Silver Package</option>
-            <option value="gold">Gold Package</option>
-            <option value="platinum">Platinum Package</option>
-          </select>
         </div>
       </div>
     </div>

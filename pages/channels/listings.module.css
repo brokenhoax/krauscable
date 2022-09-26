@@ -1,13 +1,57 @@
 .listings {
   overflow: scroll;
-  height: 65vh;
 }
 
 .flexTest {
   display: flex;
   flex-direction: column;
+  height: 80vh;
 }
 
 .header {
   margin-bottom: 16px;
+}
+
+.packages {
+  z-index: 10;
+  position: relative;
+  padding-right: 16px;
+}
+
+.filter {
+  position: absolute;
+  top: 14px;
+  bottom: 0px;
+  right: 40px;
+  height: 100%;
+}
+
+.optionsWrapper {
+  background-color: #fafafa;
+  padding: 2px 0px 2px 0px;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 18px;
+  width: 110px;
+}
+
+.option {
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #d4d4d8;
+}
+
+.option:last-child {
+  border-bottom: none !important;
+}
+
+.option:hover {
+  color: #dc2626;
+}
+
+.focus:hover {
+  color: #991b1b;
 }
