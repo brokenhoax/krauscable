@@ -1,0 +1,7 @@
+{
+  "name": "KrausCable",
+  "short_name": "KrausCable",
+  "start_url": "/krauscable",
+  "display": "standalone",
+  "theme_color": "#e4e4e7"
+}
