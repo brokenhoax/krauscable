@@ -14,7 +14,7 @@ export default function Info() {
       <section>
         <h1>Contact Info</h1>
         {/* Address */}
-        <div className="pt-24">
+        <div>
           <h2>Main Office</h2>
           <a
             className="link"

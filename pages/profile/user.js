@@ -1,15 +1,12 @@
 import styles from "./user.module.css";
-import Layout from "../../components/layout";
-import Navbar from "../../components/navbar/navbar";
-import Logo from "../../components/logo/logo.js";
 
 export default function User() {
   return (
     <>
-      <section className="pb-128">
+      <section>
         <h1>Account Management</h1>
         {/* User */}
-        <div className={styles.section}>
+        <div className="pt-24">
           <div className={"space-between"}>
             <h2>User</h2>
             <div className={"link"}>Change Password</div>
@@ -17,7 +14,7 @@ export default function User() {
           <h3>brokenhoax</h3>
         </div>
         {/* Subscription */}
-        <div className={styles.section}>
+        <div className="pt-24">
           <div className={"space-between"}>
             <h2>Subscription</h2>
             <div className={"link"}>Change Subscription</div>
@@ -30,7 +27,7 @@ export default function User() {
           </ul>
         </div>
         {/* Balance Due */}
-        <div className={styles.section}>
+        <div className="pt-24">
           <div className={"space-between"}>
             <h2>Balance Due</h2>
             <div className={"link"}>Pay Bill Online</div>
@@ -43,7 +40,7 @@ export default function User() {
         <div className={"divider"}></div>
         {/* Account Activity */}
         <h1>Account Activity</h1>
-        <div className={styles.section}>
+        <div className="pt-24">
           {/* Payment History */}
           <div className={"space-between"}>
             <h2>Payment History</h2>
@@ -71,7 +68,7 @@ export default function User() {
           </ol>
           <div className={"divider"}></div>
           <h1>Reviews</h1>
-          <div className={styles.section}>
+          <div className="pt-24">
             <p className="quote">
               Best decision I made was to switch to Kraus internet. I had AT&T
               and for the same price with Kraus my speeds are 10x faster than

@@ -8,7 +8,7 @@ const Kraus = () => {
         programming with{" "}
         <span className={styles.callout}>Kraus Cable Television</span>
       </div>
-      <div className={"pb-128"}>
+      <div>
         <p className="space-y-24">
           Arthur A. Kraus started the Kraus radio repair business in the
           depression year of 1932. As a startup business, he needed to
