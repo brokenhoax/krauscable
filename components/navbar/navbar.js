@@ -16,7 +16,7 @@ const navLinks = [
   { name: "Home", path: "/", icon: faHouse, active: false },
   {
     name: "Profile",
-    path: "/profile/user",
+    path: "/login/login",
     icon: faCircleUser,
   },
   {
