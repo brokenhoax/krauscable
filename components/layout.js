@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <div className={styles.wrapper}>
       <Logo className="logo"></Logo>
-      <div className="main overflow">{children}</div>
+      <div className="main">{children}</div>
       <Navbar className="navbar"></Navbar>
     </div>
   );

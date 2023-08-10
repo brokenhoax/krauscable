@@ -1,5 +1,7 @@
 .listings {
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .flexTest {
@@ -57,4 +59,21 @@
 
 .focus:hover {
   color: #991b1b;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 12px;
+  margin-bottom: 2px;
+}
+
+.searchbar {
+  width: 100%;
+  color: #991b1b;
+  height: 40px;
+  border-radius: 5px;
+  text-indent: 14px;
+  margin-bottom: 8px;
 }

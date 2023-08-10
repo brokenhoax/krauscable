@@ -114,27 +114,42 @@ export default function Listings() {
 
   return (
     <div className={`${styles.flexTest}`}>
+      {/* Header */}
+      <h1 className={`flex-between ${styles.header}`}>
+        Channel Listing
+        <span className={styles.packages}>
+          <FontAwesomeIcon
+            icon={faFilter}
+            className="icon-xs"
+            // onBlur={() => handlePackageFilter()}
+            // onFocus={() => handlePackageFilter()}
+            onClick={() => handlePackageFilter()}
+            tabIndex="0"
+          />
+          <div className={styles.filter}>
+            {filterToggle ? showOptions() : null}
+          </div>
+        </span>
+      </h1>
+
+      {/* Search */}
+      <div action="#" className={styles.searchForm}>
+        <div>
+          <input
+            type="text"
+            onChange={handleSearch}
+            placeholder="Search by name..."
+            name="search"
+            className={styles.searchbar}
+          ></input>
+        </div>
+      </div>
+
       {/* Table */}
       <div className={styles.listings}>
-        <div className="table-wrapper">
-          <h1 className={`flex-between ${styles.header}`}>
-            Channel Listing {/* Packages */}
-            <span className={styles.packages}>
-              <FontAwesomeIcon
-                icon={faFilter}
-                className="icon-xs"
-                // onBlur={() => handlePackageFilter()}
-                // onFocus={() => handlePackageFilter()}
-                onClick={() => handlePackageFilter()}
-                tabIndex="0"
-              />
-              <div className={styles.filter}>
-                {filterToggle ? showOptions() : null}
-              </div>
-            </span>
-          </h1>
+        <div>
           <table width="100%">
-            <thead>
+            <thead className="fixed">
               <tr>
                 <th onClick={() => handleSort("channel")}>
                   <FontAwesomeIcon
@@ -161,18 +176,6 @@ export default function Listings() {
               ))}
             </tbody>
           </table>
-        </div>
-      </div>
-      {/* Search */}
-      <div action="#" className="search-form">
-        <div>
-          <input
-            type="text"
-            onChange={handleSearch}
-            placeholder="Search..."
-            name="search"
-            className="search-input"
-          ></input>
         </div>
       </div>
     </div>
