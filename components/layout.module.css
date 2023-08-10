@@ -8,6 +8,7 @@
     "navbar";
   padding-left: 512px;
   padding-right: 512px;
+  height: 100vh;
 }
 
 @media screen and (max-width: 600px) {

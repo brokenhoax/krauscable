@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Layout from "../../components/layout";
+import styles from "./info.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faExclamationCircle,
@@ -11,10 +11,10 @@ import {
 export default function Info() {
   return (
     <>
-      <section>
-        <h1>Contact Info</h1>
+      <section className={styles.section}>
+        <h1 className={styles.header}>Contact Info</h1>
         {/* Address */}
-        <div>
+        <div className={styles.body}>
           <h2>Main Office</h2>
           <a
             className="link"
@@ -57,7 +57,7 @@ export default function Info() {
             <div className="flex">
               <FontAwesomeIcon icon={faTelevision} className={"icon-sm"} />
               <p className="pl-16 link">
-                <Link href="/services/overview">Order Services</Link>
+                <Link href="/services">Order Services</Link>
               </p>
             </div>
             <div className="flex">
@@ -71,17 +71,6 @@ export default function Info() {
               <p className="pl-16 link">
                 <a href="mailto:andrew@krausonline.com?subject=Kraus Cable Webmaster">
                   Webmaster
-                </a>
-              </p>
-            </div>
-            <div className="flex">
-              <FontAwesomeIcon
-                icon={faExclamationCircle}
-                className={"icon-sm"}
-              />
-              <p className="pl-16 link">
-                <a href="mailto:art@krausonline.com?subject=Reporting Abuse">
-                  Report Abuse
                 </a>
               </p>
             </div>

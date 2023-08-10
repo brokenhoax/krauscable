@@ -39,7 +39,7 @@ const navLinks = [
 function Navbar() {
   const router = useRouter();
   return (
-    <header>
+    <nav>
       <ul className={styles.navContainer}>
         {navLinks.map((link, index) => {
           return (
@@ -58,7 +58,7 @@ function Navbar() {
           );
         })}
       </ul>
-    </header>
+    </nav>
   );
 }
 

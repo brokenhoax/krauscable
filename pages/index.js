@@ -14,7 +14,7 @@ export default function Home() {
         <meta name="theme-color" content="#e4e4e7"></meta>
         <link rel="manifest" href="/krauscable/manifest.json"></link>
       </Head>
-      <main className="wrapper">
+      <main>
         <Kraus></Kraus>
       </main>
     </div>

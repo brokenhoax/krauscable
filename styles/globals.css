@@ -269,6 +269,10 @@ h3 {
   margin-top: 50px;
 }
 
+.mt-32 {
+  margin-top: 32px;
+}
+
 .mt-16 {
   margin-top: 16px;
 }
@@ -535,14 +539,11 @@ body {
 .logo {
   display: grid;
   grid-area: logo;
-  background-color: blue;
 }
 
 .main {
   display: grid;
   grid-area: main;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .navbar {
